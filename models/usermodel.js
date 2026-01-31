@@ -1,10 +1,6 @@
 const mongoose = require('mongoose')
 
-module.exports = () => {
-    mongoose.connect("mongodb://127.0.0.1:27017/userDB")
-.then(() => console.log("MongoDB Connected!!!!!"))
-.catch(err => console.log("DB Error:", err))
-}
+
 const userSchema = new mongoose.Schema({
     name: String,
     email: { type: String, required: true, unique: true },
@@ -13,3 +9,5 @@ const userSchema = new mongoose.Schema({
     age: Number,
     requestQuota: { type: Number, default: 5 }
 })
+
+module.exports = mongoose.model("User", userSchema)
