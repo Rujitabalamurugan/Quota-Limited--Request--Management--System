@@ -2,7 +2,7 @@ import bcrypt
 from pymongo import MongoClient
 from datetime import datetime
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://rujitabalamurugan_db_user:Rujita%4029@cluster0.gfxrofb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client["contact_system"]
 users = db["users"]
 

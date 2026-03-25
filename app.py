@@ -7,7 +7,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 CORS(app)
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://rujitabalamurugan_db_user:Rujita%4029@cluster0.gfxrofb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client["contact_system"]
 collection = db["messages"]
 
